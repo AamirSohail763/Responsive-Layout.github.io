@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Layout</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        #heading{
+            height: auto;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        #heading>h1{
+            font-size: 40px;
+        }
+        #heading>p{
+            font-size: 20px;
+            color: rgb(109,109,109);
+            margin-top: -15px;
+            line-height: 30px;
+        }
+        #cards{
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 400px;
+            gap: 25px;
+            margin: auto;
+        }
+        #cards>div{
+            border-radius: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            text-align: center;
+        }
+        div>h2{
+            margin-top: 30px;
+        }
+        #cards>div:nth-child(1)>h1{
+            color: rgb(9, 171, 120);
+        }
+        #cards>div>h1+p{
+            font-style: italic;
+            color: rgb(109,109,109);
+            margin-top: -15px;
+        }
+        p+p{
+            color: rgb(109,109,109);
+            line-height: 25px;
+            padding: 20px 20px 0px 20px;
+        }
+        button{
+            color: rgb(0, 122, 255);
+            border: 1px solid rgb(0, 122, 255);
+            background-color: white;
+            border-radius: 10px;
+            padding: 18px 48px 18px 48px;
+            font-size: 20px;
+            margin-top: 15px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        button:hover{
+            background-color: rgb(0, 122, 255);
+            color: white;
+        }
+        #cards>div:nth-child(2)>h1{
+            color: rgb(242,126,66);
+        }
+        #cards>div:nth-child(3)>h1{
+            color: rgb(66,148,242);
+        }
+
+        @media all and (min-width:451px) and (max-width:800px)
+        {
+            #cards{
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 400px 400px;
+            gap: 20px;
+            }
+            #heading{
+            width: 90%;
+            }
+        }
+
+        @media all and (min-width:100px) and (max-width:450px)
+        {
+            #cards{
+            width: 95%;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 250px 250px 250;
+            gap: 10px;
+            }
+
+            #heading{
+            width: 80%;
+            }
+        #heading>h1{
+            font-size: 30px;
+            }
+
+            #heading>p{
+            font-size: 16px;
+            margin-top: -10px;
+            line-height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="heading">
+        <h1>Choose a plan that right for your business</h1>
+        <p>We collect reviews from our users so you can get an honest opinion of what an experience
+            with our websites are really like!
+        </p>
+    </div>
+
+    <div id="cards">
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience
+                with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Business Plan</h2>
+            <h1>$39.00</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience
+                with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Premium Plan</h2>
+            <h1>$59.00</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience
+                with our website.</p>
+            <button>Start Now</button>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
